@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "4d054c36-260c-40fa-bf1a-7f45e1d20743",
+		"name": "springboot-in-action",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29784085"
+	},
+	"item": [
+		{
+			"name": "addBook",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "harsha",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "harsha",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reader\": \"harsha\",\n    \"isbn\": \"9876543210\",\n    \"title\": \"revanth\",\n    \"author\": \"revanth\",\n    \"description\": \"revanth\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBooksByReader",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "harsha",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "harsha",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"reader\": \"harsha\",\n    \"isbn\": \"1234567890\",\n    \"title\": \"harsha\",\n    \"author\": \"harsha\",\n    \"description\": \"harsha\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/books?reader=harsha",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					],
+					"query": [
+						{
+							"key": "reader",
+							"value": "harsha"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"harsha\",\n    \"password\":\"harsha\",\n    \"fullName\":\"harsha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
