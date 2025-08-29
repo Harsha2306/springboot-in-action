@@ -23,6 +23,9 @@ spring:
     console:
       enabled: true
 
+  profiles:
+    active: prod
+
 management:
   endpoints:
     web:
@@ -32,4 +35,3 @@ management:
     health:
       probes:
         enabled: true
-
